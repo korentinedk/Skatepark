@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, WebVR! - A-Frame</title>
+    <meta name="description" content="Hello, WebVR! - A-Frame">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+
+    <a-scene>
+
+      <a-assets>
+
+        <a-asset-item id="cristal-obj" src="source/cristal.obj"></a-asset-item>
+        <a-asset-item id="cristal-mtl" src="source/cristal.mtl"></a-asset-item>
+
+        <a-asset-item id="flower" src= "https://raw.githubusercontent.com/korentinedk/Skatepark/master/flower_room/scene.gltf"></a-asset-item>
+
+        <img id="mysky" src="source/mysky.png">
+
+      </a-assets>
+
+
+<a-entity position="0.000 3.779 -12.779">
+      <a-sphere material="src:source/zebra.png" position="0 0 0" scale="2.000 2.000 2.000"></a-sphere>
+          <a-animation attribute="rotation"
+                       dur="10000"
+                       fill="forwards"
+                       to="0 360 0"
+                       repeat="indefinite"></a-animation>
+        </a-entity>
+
+        <a-entity obj-model="obj: #cristal-obj" material="src:source/zebra.png" position="-25.720 0.000 -1.505" scale="1.000 1.000 1.000" rotation= "0 240 0"></a-entity>
+
+        <a-entity gltf-model="#flower" position="-3.387 1.500 -14.946" "0="" 0="" 0"="" scale="1.000 1.000 1.000" rotation= "0 50 0"></a-entity>
+        <a-entity gltf-model="#flower" position="-20.018 6.379 -16.947" "0="" 0="" 0"="" scale="0.500 0.500 0.500" rotation= "0 120 0"></a-entity>
+        <a-entity gltf-model="#flower" position="2.216 17.266 -12.582" "0="" 0="" 0"="" scale="0.500 0.500 0.500" rotation= "0 50 0"></a-entity>
+        <a-entity gltf-model="#flower" position="-10.924 7.351 -0.199" "0="" 0="" 0"="" scale="0.200 0.200 0.200" rotation= "0 70 0"></a-entity>
+        <a-entity gltf-model="#flower" position="9.926 6.379 -14.416" "0="" 0="" 0"="" scale="0.300 0.300 0.300" rotation= "0 70 0"></a-entity>
+
+
+
+        <a-sky src="#mysky"></a-sky>
+
+
+
+
+
+
+
+
+
+<a-entity position="0 0 0"><a-camera></a-camera></a-entity>
+
+    </a-scene>
+
+  </body>
+</html>
